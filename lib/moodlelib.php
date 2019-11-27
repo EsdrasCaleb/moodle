@@ -2078,7 +2078,6 @@ function make_timestamp($year, $month=1, $day=1, $hour=0, $minute=0, $second=0, 
  * @return string A nicely formatted date/time string
  */
 function format_time($totalsecs, $str = null) {
-
     $totalsecs = abs($totalsecs);
 
     if (!$str) {
@@ -2134,7 +2133,7 @@ function format_time($totalsecs, $str = null) {
     }
 
     if ($years) {
-        return trim($oyears .' '. $odays);
+        return trim($oyears .' '. $odays.' '.$ohours);
     }
     if ($days) {
         return trim($odays .' '. $ohours);
